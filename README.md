@@ -1,6 +1,6 @@
 # Questions
 
-#### 1. What would you use for angular application to communicate with backend services over the HTTP protocol.
+### 1. What would you use for angular application to communicate with backend services over the HTTP protocol.
 
 I would use the **HttpClient** API introduced in the version 4.3 replacing and simplifying the existing Angular Http API.
 
@@ -62,7 +62,7 @@ export class AppComponent implements OnInit {
 
 We inject **HttpClient** service in our component to handle http requests.
 
-#### 2. You want to redirect a user to a login page when any API request returns 401 status code. What would you use to handle such case globally?
+### 2. You want to redirect a user to a login page when any API request returns 401 status code. What would you use to handle such case globally?
 
 I would create a *interceptor* which implements **HttpInterceptor** interface to handle globally unauthorized responses. 
 
@@ -113,7 +113,7 @@ export class AppModule {}
 
 ```
 
-#### 3. What for are the route guards in Angular?.
+### 3. What for are the route guards in Angular?.
 
 Router Guard is another way of handle authentication. It prevent users from accessing areas that they’re not allowed.
 
@@ -158,7 +158,7 @@ There are several types of guards, but the one I use is the `canActivate` type w
 
 Router guard tell the router whether or not it should allow navigation to a requested route returning `true` or `false` value.
 
-#### 4. Angular component has subscribed to several observers. Why, when and how do you unsubscribe from those subscriptions.
+### 4. Angular component has subscribed to several observers. Why, when and how do you unsubscribe from those subscriptions.
 
 __Why__ 
 
