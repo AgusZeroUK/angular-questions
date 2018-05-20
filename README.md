@@ -88,7 +88,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
 ```
 
-As side-effect, the interceptor needs to provided to the `HTTP_INTERCEPTORS` array for our application on `AppModule`.
+As side-effect, the interceptor needs to be provided to the `HTTP_INTERCEPTORS` array for our application on `AppModule`.
 
 _app.module.ts_
 ```typescript
