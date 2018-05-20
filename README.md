@@ -144,7 +144,7 @@ import { Router, CanActivate } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Injectable()
-export class AuthGuardService implements CanActivate {
+export class AuthGuard implements CanActivate {
   constructor(public auth: AuthService, public router: Router) {}
   canActivate(): boolean {
     if (!this.auth.isAuthenticated()) {
@@ -159,6 +159,18 @@ export class AuthGuardService implements CanActivate {
 There are several types of guards, but the one I use is the `canActivate` type which is run before you navigate to a route.
 
 Router guard tell the router whether or not it should allow navigation to a requested route returning `true` or `false` value.
+
+Finally we need to add this guard to the route we want to control:
+
+```typescript
+export const AppRoutes = [
+  { 
+    path: '',
+    component: AppComponent,
+    canActivate: ['AuthGuard']
+  }
+];
+```
 
 ### 4. Angular component has subscribed to several observers. Why, when and how do you unsubscribe from those subscriptions.
 
