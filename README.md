@@ -123,6 +123,7 @@ _auth.service.ts_
 ```typescript
 import { Injectable } from '@angular/core';
 import { helperTokenService } from 'some-authentication-helper';
+
 @Injectable()
 export class AuthService {
   constructor(public helper: helperTokenService) {}
@@ -141,6 +142,7 @@ _auth-guard.service.ts_
 import { Injectable } from '@angular/core';
 import { Router, CanActivate } from '@angular/router';
 import { AuthService } from './auth.service';
+
 @Injectable()
 export class AuthGuardService implements CanActivate {
   constructor(public auth: AuthService, public router: Router) {}
